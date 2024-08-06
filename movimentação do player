@@ -1,0 +1,27 @@
+public class Movimentacao : MonoBehaviour
+{
+    int posicao = 0; //posição inicial do player
+    char  tecla;
+    public void Main()
+    {
+        Console.WriteLine("Pressiona a tecla 'a' para se movar para esquerda e 'd' para a direita!"); //indicando para qual tecla apertar 
+
+        while (true) //entrará em um loop eterno
+        {
+            var tecla = Console.ReadKey().KeyChar; //aqui a intenção é ler a tecla pressionada
+        }
+
+        if (tecla == 'd') //checar se a tecla 'd' pressiona a direita 
+        {
+            posicao++; //se for o caso, entao automaticamente se move para a direita(aumentar a posição) 
+        }
+
+        else if (tecla == 'a')// checar se a tecla 'a' pressiona a esquerda
+        {
+            posicao--; //se sim, entao a posição diminui e o jogador se move para a esquerda 
+        }
+
+        Console.WriteLine($"\nPosiçãoatual:{posicao}");
+    }
+    
+}
